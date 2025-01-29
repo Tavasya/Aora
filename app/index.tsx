@@ -7,7 +7,7 @@ export default function Index() {
     <View className="flex-1 items-center justify-center bg-white">
       <Text className="text-3xl font-pblack">Edit app/index.tsx to edit this screen.</Text>
       <StatusBar style="auto" />
-      <Link href="/profile" style ={{ color: 'blue'}}>Go to Profile</Link>
+      <Link href="/home" style ={{ color: 'blue'}}>Go to Profile</Link>
     </View>
   );
 }
