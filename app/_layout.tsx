@@ -3,6 +3,9 @@ import { SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font'
 import { useEffect } from 'react'
 
+import { Gesture, GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 SplashScreen.preventAutoHideAsync();
 //This function prevents the splash screen from hiding automatically
 
@@ -52,12 +55,18 @@ const RootLayout = () => {
 
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+        </Stack>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
+
   )
 }
 
 export default RootLayout
 
-const styles = StyleSheet.create({})
+
