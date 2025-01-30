@@ -14,6 +14,8 @@ import { ScrollView } from "react-native-gesture-handler";
 //use scroll view to make the content scrollable
 // also the height of our content might me larger than small screens, so this is so these small screen could scroll and it'd be fine      
 
+
+//this is the landing page
 export default function Index() {
   return (
     <SafeAreaView className="bg-primary h-full">
@@ -33,6 +35,21 @@ export default function Index() {
             className="max-w-[380px] w-full h-[300px]"
             resizeMode="contain"
           />
+
+          <View className="relative mt-5">
+            <Text className="text-3xl text-white font-bold text-center">Discover Endless{'\n'}Posibilitities with
+              <Text className="text-secondary-200"> Aora</Text>
+            </Text>
+
+
+            <Image 
+              source={images.path}
+              className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
+              resizeMode="contain"
+            />
+
+
+          </View>
 
          
            
