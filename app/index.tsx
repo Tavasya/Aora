@@ -8,6 +8,7 @@ import CustomButton from "../componenets/CustomButton";
 
 import "../global.css"
 import { ScrollView } from "react-native-gesture-handler";
+import { useGlobalContext } from "@/context/GlobalProvider";
 
 
 //use safe area view instead of view when wanting to cover the entire screen
@@ -28,6 +29,10 @@ import { ScrollView } from "react-native-gesture-handler";
 
 //this is the landing page
 export default function Index() {
+  const{isLoading, isLogged} = useGlobalContext();
+
+  if(!isLoading && isLogged) return <Redirect href="/home" />
+
   return (
     <SafeAreaView className="bg-primary h-full">
 
